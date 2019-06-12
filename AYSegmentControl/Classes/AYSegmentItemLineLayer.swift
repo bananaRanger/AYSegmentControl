@@ -34,7 +34,7 @@ class AYSegmentItemLineLayer: CALayer {
       pathAnimation.fromValue = frame.origin.x
       pathAnimation.toValue = rect.origin.x
       pathAnimation.duration = animationDuration
-      pathAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+      pathAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
       pathAnimation.delegate = self
       add(pathAnimation, forKey: nil)
       frame.origin.x = rect.origin.x
