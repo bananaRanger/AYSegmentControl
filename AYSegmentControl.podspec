@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 A special control that provides one or more buttons in a single view for selecting between different screens, views, or modes in your app.
                        DESC
 
-  s.homepage         = 'https://github.com/antonyereshchenko@gmail.com/AYSegmentControl'
+  s.homepage         = 'https://github.com/bananaRanger/AYSegmentControl.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Anton Yereshchenko' => 'antonyereshchenko@gmail.com' }
