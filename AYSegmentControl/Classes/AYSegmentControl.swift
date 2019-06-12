@@ -23,7 +23,7 @@
 import UIKit
 
 // MARK: - AYSegmentControl class -
-class AYSegmentControl: UIControl, AYSegment {
+public class AYSegmentControl: UIControl, AYSegment {
   
   // MARK: - Private properties
   private var configurator = AYSegmentItemConfigurator()
@@ -31,7 +31,7 @@ class AYSegmentControl: UIControl, AYSegment {
   private var lineLayer: AYSegmentItemLineLayer?
   
   // MARK: - Public properties
-  var isSelectionIndicatorHidden = false {
+  public var isSelectionIndicatorHidden = false {
     didSet {
       if isSelectionIndicatorHidden {
         lineLayer?.removeFromSuperlayer()
@@ -48,9 +48,9 @@ class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  var spacing = CGFloat(0.0)
+  public var spacing = CGFloat(0.0)
   
-  var lineHeight = CGFloat(8.0) {
+  public  var lineHeight = CGFloat(8.0) {
     didSet {
       if let segment = subLabel(byTag: selectedIndex) {
         lineLayer?.frame = AYSegmentItemLineLayer.lineRect(with: segment.frame, and: lineHeight)
@@ -58,19 +58,19 @@ class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  var lineCornerRadius = CGFloat(0.0) {
+  public  var lineCornerRadius = CGFloat(0.0) {
     didSet {
       lineLayer?.cornerRadius = lineCornerRadius
     }
   }
   
-  var lineColor: UIColor = UIColor.black {
+  public var lineColor: UIColor = UIColor.black {
     didSet {
       lineLayer?.backgroundColor = lineColor.cgColor
     }
   }
   
-  var textColor: UIColor {
+  public var textColor: UIColor {
     get {
       return configurator.textColor
     }
@@ -79,7 +79,7 @@ class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  var itemsColor: UIColor {
+  public var itemsColor: UIColor {
     get {
       return configurator.itemsColor
     }
@@ -88,7 +88,7 @@ class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  var font: UIFont {
+  public var font: UIFont {
     get {
       return configurator.font
     }
@@ -97,7 +97,7 @@ class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  var selectedTextColor: UIColor {
+  public var selectedTextColor: UIColor {
     get {
       return configurator.selectedTextColor
     }
@@ -106,7 +106,7 @@ class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  var selectedItemsColor: UIColor {
+  public var selectedItemsColor: UIColor {
     get {
       return configurator.selectedItemsColor
     }
@@ -115,7 +115,7 @@ class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  var segmentTitles = [String]() {
+  public var segmentTitles = [String]() {
     didSet {
       subviews.forEach { $0.removeFromSuperview() }
       let items = configurator.createItems(with: segmentTitles)
@@ -124,7 +124,7 @@ class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  private(set) var selectedIndex = 0 {
+  public private(set) var selectedIndex = 0 {
     didSet {
       self.selectedIndex = selectedIndex >= 0 ? selectedIndex : 0
       self.selectedIndex = selectedIndex >= subviews.count ? subviews.count - 1 : selectedIndex
@@ -132,7 +132,7 @@ class AYSegmentControl: UIControl, AYSegment {
   }
   
   // MARK: - Overridden methods
-  override func layoutSubviews() {
+  override public func layoutSubviews() {
     super.layoutSubviews()
     if let segment = subLabel(byTag: selectedIndex) {
       if let layer = lineLayer {
@@ -143,7 +143,7 @@ class AYSegmentControl: UIControl, AYSegment {
     lineLayer?.update(with: selected.frame, with: false)
   }
   
-  override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+  override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
     super.beginTracking(touch, with: event)
     
     let point = touch.location(in: self)
@@ -158,7 +158,7 @@ class AYSegmentControl: UIControl, AYSegment {
     return true
   }
   
-  override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+  override public func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
     super.continueTracking(touch, with: event)
     
     let point = touch.location(in: self)
@@ -178,7 +178,7 @@ class AYSegmentControl: UIControl, AYSegment {
     return true
   }
   
-  override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+  override public func endTracking(_ touch: UITouch?, with event: UIEvent?) {
     super.endTracking(touch, with: event)
     
     guard let point = touch?.location(in: self) else { return }
@@ -197,7 +197,7 @@ class AYSegmentControl: UIControl, AYSegment {
   }
   
   // MARK: - Public methods
-  func select(segment index: Int, with animation: Bool) {
+  public func select(segment index: Int, with animation: Bool) {
     reset()
 
     guard let nextSegment = subLabel(byTag: index),

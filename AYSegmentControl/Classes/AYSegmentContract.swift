@@ -23,7 +23,7 @@
 import UIKit
 
 // MARK: - AYSegment protocol 
-protocol AYSegment where Self: UIControl {
+public protocol AYSegment where Self: UIControl {
   var spacing: CGFloat { get set }
   
   var lineHeight: CGFloat { get set }
