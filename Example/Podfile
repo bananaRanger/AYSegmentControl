@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AYSegmentControl_Example' do
+  pod 'AYSegmentControl', :path => '../'
+
+  target 'AYSegmentControl_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

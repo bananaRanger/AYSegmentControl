@@ -1,0 +1,16 @@
+PODS:
+  - AYSegmentControl (0.1.0)
+
+DEPENDENCIES:
+  - AYSegmentControl (from `../`)
+
+EXTERNAL SOURCES:
+  AYSegmentControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AYSegmentControl: 3245cf0ba40150053faaaf04958641b768566a8c
+
+PODFILE CHECKSUM: 15c267490cee6c0e80c638b96f3f78bfc703dd15
+
+COCOAPODS: 1.6.0
