@@ -30,8 +30,8 @@
 /* Begin PBXFileReference section */
 		01FD6421F2A388747A14526D /* Pods-AYSegmentControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AYSegmentControl_Tests.release.xcconfig"; path = "Target Support Files/Pods-AYSegmentControl_Tests/Pods-AYSegmentControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		033F2A84A9178F76332684B5 /* Pods-AYSegmentControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AYSegmentControl_Example.release.xcconfig"; path = "Target Support Files/Pods-AYSegmentControl_Example/Pods-AYSegmentControl_Example.release.xcconfig"; sourceTree = "<group>"; };
-		06C1FD5D85CF591935C47769 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		14C72049372365885B53A371 /* AYSegmentControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AYSegmentControl.podspec; path = ../AYSegmentControl.podspec; sourceTree = "<group>"; };
+		06C1FD5D85CF591935C47769 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		14C72049372365885B53A371 /* AYSegmentControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AYSegmentControl.podspec; path = ../AYSegmentControl.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		55E28AECC6D54718FEBBEF9C /* Pods-AYSegmentControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AYSegmentControl_Tests.debug.xcconfig"; path = "Target Support Files/Pods-AYSegmentControl_Tests/Pods-AYSegmentControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AYSegmentControl_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AYSegmentControl_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		607FACE51AFB9204008FA782 /* AYSegmentControl_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AYSegmentControl_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6745E14575B1415197CAECC8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6745E14575B1415197CAECC8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		771D6ABCFCA28427A25706CA /* Pods_AYSegmentControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AYSegmentControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94E4A579D5028C633C60065 /* Pods_AYSegmentControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AYSegmentControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D637F7FCE266397A667A24A4 /* Pods-AYSegmentControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AYSegmentControl_Example.debug.xcconfig"; path = "Target Support Files/Pods-AYSegmentControl_Example/Pods-AYSegmentControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,7 +156,6 @@
 				55E28AECC6D54718FEBBEF9C /* Pods-AYSegmentControl_Tests.debug.xcconfig */,
 				01FD6421F2A388747A14526D /* Pods-AYSegmentControl_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
