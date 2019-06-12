@@ -10,11 +10,14 @@
 		1108C28E55847681E414D6699E422E56 /* Pods-AYSegmentControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36FF8C5745AE846049BE5CD762DB04E2 /* Pods-AYSegmentControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A7C778B25878057CF7B034AFF08674D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		1C434BE0277E90BACAE6F8B2517F60D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		406631B122B0F4C0008FBA3A /* AYSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406631AD22B0F4C0008FBA3A /* AYSegmentControl.swift */; };
+		406631B222B0F4C0008FBA3A /* AYSegmentContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406631AE22B0F4C0008FBA3A /* AYSegmentContract.swift */; };
+		406631B322B0F4C0008FBA3A /* AYSegmentItemConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406631AF22B0F4C0008FBA3A /* AYSegmentItemConfigurator.swift */; };
+		406631B422B0F4C0008FBA3A /* AYSegmentItemLineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406631B022B0F4C0008FBA3A /* AYSegmentItemLineLayer.swift */; };
 		7D4599FD895845B88E1222C7D6091052 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		87304AB8AAC76C962FD4A2D442A1822B /* Pods-AYSegmentControl_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 015CC5BDF751688B9BD71F4B82407980 /* Pods-AYSegmentControl_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A19E8BDC59373EA7B7CF49E8CD2FB4C3 /* AYSegmentControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 638C9ED8955EBACE1FC619548D7D960F /* AYSegmentControl-dummy.m */; };
 		B148FE802A8A10753B23272E578B233F /* AYSegmentControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B612B106FE181A0B4C08AB7ABA68877 /* AYSegmentControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF6943656A74217044C5865C242B8B42 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA91882967C8830E780FD2540C1DCA /* ReplaceMe.swift */; };
 		FCF3E705D13BED3824CB7080F1C5EAEB /* Pods-AYSegmentControl_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B410AD1BA32984A7493E876D16E9E1 /* Pods-AYSegmentControl_Tests-dummy.m */; };
 		FD839B03847FF984D0B4F56C49DD446C /* Pods-AYSegmentControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C930DF43652790853ED266D9687B5631 /* Pods-AYSegmentControl_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -38,12 +41,16 @@
 
 /* Begin PBXFileReference section */
 		015CC5BDF751688B9BD71F4B82407980 /* Pods-AYSegmentControl_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AYSegmentControl_Tests-umbrella.h"; sourceTree = "<group>"; };
-		0496029AD6165B1AA2CED3075E2EBE49 /* AYSegmentControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AYSegmentControl.framework; path = AYSegmentControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0496029AD6165B1AA2CED3075E2EBE49 /* AYSegmentControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AYSegmentControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E6A3C5A0859546995F20BCFA047A49 /* Pods-AYSegmentControl_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AYSegmentControl_Tests-Info.plist"; sourceTree = "<group>"; };
-		16E8EB6823480F65B171637D5440A94D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		16E8EB6823480F65B171637D5440A94D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		17FBDED727B12C08B17D87D5D727EDE4 /* Pods-AYSegmentControl_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AYSegmentControl_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		27C45491465E1D83E5C4D66FE1B69CD8 /* AYSegmentControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AYSegmentControl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		27C45491465E1D83E5C4D66FE1B69CD8 /* AYSegmentControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AYSegmentControl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		36FF8C5745AE846049BE5CD762DB04E2 /* Pods-AYSegmentControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AYSegmentControl_Example-umbrella.h"; sourceTree = "<group>"; };
+		406631AD22B0F4C0008FBA3A /* AYSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AYSegmentControl.swift; path = AYSegmentControl/Classes/AYSegmentControl.swift; sourceTree = "<group>"; };
+		406631AE22B0F4C0008FBA3A /* AYSegmentContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AYSegmentContract.swift; path = AYSegmentControl/Classes/AYSegmentContract.swift; sourceTree = "<group>"; };
+		406631AF22B0F4C0008FBA3A /* AYSegmentItemConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AYSegmentItemConfigurator.swift; path = AYSegmentControl/Classes/AYSegmentItemConfigurator.swift; sourceTree = "<group>"; };
+		406631B022B0F4C0008FBA3A /* AYSegmentItemLineLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AYSegmentItemLineLayer.swift; path = AYSegmentControl/Classes/AYSegmentItemLineLayer.swift; sourceTree = "<group>"; };
 		537222D43F130A10013589B552D7FBC9 /* AYSegmentControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AYSegmentControl-prefix.pch"; sourceTree = "<group>"; };
 		54A3FFBD8D5FD379761F9DAD371CDFC4 /* Pods-AYSegmentControl_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AYSegmentControl_Example-Info.plist"; sourceTree = "<group>"; };
 		584522F884F36DEFDE46F59F91E4E0C6 /* Pods-AYSegmentControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AYSegmentControl_Example.modulemap"; sourceTree = "<group>"; };
@@ -52,23 +59,22 @@
 		67A83F2D5F2A932C417AC430B1858A18 /* Pods-AYSegmentControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AYSegmentControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		67B410AD1BA32984A7493E876D16E9E1 /* Pods-AYSegmentControl_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AYSegmentControl_Tests-dummy.m"; sourceTree = "<group>"; };
 		6A5B6D748FFB5B6EE25C07F7DEE7A51F /* Pods-AYSegmentControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AYSegmentControl_Example-frameworks.sh"; sourceTree = "<group>"; };
-		79DA91882967C8830E780FD2540C1DCA /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = AYSegmentControl/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		7DD1795C67004F59249C30A7E33CCA92 /* Pods-AYSegmentControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AYSegmentControl_Example.release.xcconfig"; sourceTree = "<group>"; };
 		81BBF8A1C9D8564DEE5305643DBBDD2B /* Pods-AYSegmentControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AYSegmentControl_Tests.modulemap"; sourceTree = "<group>"; };
-		8FE3F2C03005E9FB829A9CF81F51E8F9 /* Pods_AYSegmentControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AYSegmentControl_Tests.framework; path = "Pods-AYSegmentControl_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FE3F2C03005E9FB829A9CF81F51E8F9 /* Pods_AYSegmentControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AYSegmentControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B612B106FE181A0B4C08AB7ABA68877 /* AYSegmentControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AYSegmentControl-umbrella.h"; sourceTree = "<group>"; };
 		9C107BEA97B0D7931C51325DAF9BD10D /* AYSegmentControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AYSegmentControl.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5B89BE3EE30E99F0E8703883537B104 /* Pods-AYSegmentControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AYSegmentControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B40FDB1D53FA7358C088AA8EDC46D5BE /* Pods-AYSegmentControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AYSegmentControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7754FE4987F8BE3E1264ED6E5622A58 /* AYSegmentControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AYSegmentControl.xcconfig; sourceTree = "<group>"; };
-		C862ECDF9D68E8FDA173C6FA4ABD15AE /* Pods_AYSegmentControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AYSegmentControl_Example.framework; path = "Pods-AYSegmentControl_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C862ECDF9D68E8FDA173C6FA4ABD15AE /* Pods_AYSegmentControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AYSegmentControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C930DF43652790853ED266D9687B5631 /* Pods-AYSegmentControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AYSegmentControl_Example-dummy.m"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E7946234009BD06459B7064DDC52F410 /* Pods-AYSegmentControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AYSegmentControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EA73E4C905CADD289C3CA8D92FC0E5E2 /* Pods-AYSegmentControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AYSegmentControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C40B59C781295599CDF5C6F65F6D6C /* Pods-AYSegmentControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AYSegmentControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F1AA564234E0425970136FD6864381CA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F1AA564234E0425970136FD6864381CA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +146,10 @@
 		7EE50A71AC6411DDE3CE79A599BB1D76 /* AYSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
-				79DA91882967C8830E780FD2540C1DCA /* ReplaceMe.swift */,
+				406631AE22B0F4C0008FBA3A /* AYSegmentContract.swift */,
+				406631AD22B0F4C0008FBA3A /* AYSegmentControl.swift */,
+				406631AF22B0F4C0008FBA3A /* AYSegmentItemConfigurator.swift */,
+				406631B022B0F4C0008FBA3A /* AYSegmentItemLineLayer.swift */,
 				946544D7BCB0088F396E7866A88E92A3 /* Pod */,
 				3989F235B1E4096E87459DB06C095658 /* Support Files */,
 			);
@@ -315,12 +324,18 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					D3818BA46E30C6B8F184267F4E0AE4C0 = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -364,8 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				406631B422B0F4C0008FBA3A /* AYSegmentItemLineLayer.swift in Sources */,
+				406631B222B0F4C0008FBA3A /* AYSegmentContract.swift in Sources */,
+				406631B322B0F4C0008FBA3A /* AYSegmentItemConfigurator.swift in Sources */,
 				A19E8BDC59373EA7B7CF49E8CD2FB4C3 /* AYSegmentControl-dummy.m in Sources */,
-				BF6943656A74217044C5865C242B8B42 /* ReplaceMe.swift in Sources */,
+				406631B122B0F4C0008FBA3A /* AYSegmentControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7754FE4987F8BE3E1264ED6E5622A58 /* AYSegmentControl.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -519,7 +538,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AYSegmentControl/AYSegmentControl-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AYSegmentControl/AYSegmentControl-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AYSegmentControl/AYSegmentControl.modulemap";
 				PRODUCT_MODULE_NAME = AYSegmentControl;
@@ -527,6 +546,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -636,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7754FE4987F8BE3E1264ED6E5622A58 /* AYSegmentControl.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -648,7 +669,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AYSegmentControl/AYSegmentControl-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AYSegmentControl/AYSegmentControl-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AYSegmentControl/AYSegmentControl.modulemap";
 				PRODUCT_MODULE_NAME = AYSegmentControl;
@@ -717,8 +738,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

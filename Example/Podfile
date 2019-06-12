@@ -5,7 +5,6 @@ target 'AYSegmentControl_Example' do
 
   target 'AYSegmentControl_Tests' do
     inherit! :search_paths
-
     
   end
 end
