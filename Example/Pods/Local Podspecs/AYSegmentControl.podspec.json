@@ -1,22 +1,24 @@
 {
   "name": "AYSegmentControl",
-  "version": "0.1.0",
-  "summary": "A short description of AYSegmentControl.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/antonyereshchenko@gmail.com/AYSegmentControl",
+  "version": "1.0.3",
+  "summary": "A special control that provides one or more buttons in a single view.",
+  "description": "A special control that provides one or more buttons in a single view for selecting between different screens, views, or modes in your app.",
+  "homepage": "https://github.com/bananaRanger/AYSegmentControl.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "antonyereshchenko@gmail.com": "anton.ereshchenko@powercode.us"
+    "Anton Yereshchenko": "antonyereshchenko@gmail.com"
   },
   "source": {
-    "git": "https://github.com/antonyereshchenko@gmail.com/AYSegmentControl.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/bananaRanger/AYSegmentControl.git",
+    "tag": "1.0.3"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "AYSegmentControl/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "AYSegmentControl/Classes/**/*",
+  "swift_version": "5.0"
 }

@@ -50,15 +50,16 @@ public class AYSegmentControl: UIControl, AYSegment {
   
   public var spacing = CGFloat(0.0)
   
-  public  var lineHeight = CGFloat(8.0) {
+  public var lineHeight = CGFloat(8.0) {
     didSet {
-      if let segment = subLabel(byTag: selectedIndex) {
+      if let segment = subLabel(byTag: selectedIndex ?? 0) {
         lineLayer?.frame = AYSegmentItemLineLayer.lineRect(with: segment.frame, and: lineHeight)
+        lineLayer?.isHidden = selectedIndex == nil
       }
     }
   }
   
-  public  var lineCornerRadius = CGFloat(0.0) {
+  public var lineCornerRadius = CGFloat(0.0) {
     didSet {
       lineLayer?.cornerRadius = lineCornerRadius
     }
@@ -124,32 +125,43 @@ public class AYSegmentControl: UIControl, AYSegment {
     }
   }
   
-  public private(set) var selectedIndex = 0 {
+  public private(set) var selectedIndex: Int? = nil {
     didSet {
-      self.selectedIndex = selectedIndex >= 0 ? selectedIndex : 0
-      self.selectedIndex = selectedIndex >= subviews.count ? subviews.count - 1 : selectedIndex
+      guard let index = selectedIndex else { return }
+      self.selectedIndex = index >= 0 ? index : 0
+      self.selectedIndex = index >= subviews.count ? subviews.count - 1 : index
     }
   }
   
   // MARK: - Overridden methods
   override public func layoutSubviews() {
     super.layoutSubviews()
-    if let segment = subLabel(byTag: selectedIndex) {
+    guard let index = selectedIndex else { return }
+ 
+    if let segment = subLabel(byTag: index) {
       if let layer = lineLayer {
         layer.frame = AYSegmentItemLineLayer.lineRect(with: segment.frame, and: lineHeight)
       }
     }
-    guard let selected = subLabel(byTag: selectedIndex) else { return }
+    
+    guard let selected = subLabel(byTag: index) else { return }
     lineLayer?.update(with: selected.frame, with: false)
   }
   
   override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
     super.beginTracking(touch, with: event)
-    
     let point = touch.location(in: self)
+
+    guard let detectedSegment = detectSubview(point) else { return false }
     
-    guard let detectedSegment = detectSubview(point),
-      let currentSegment = subLabel(byTag: selectedIndex),
+    guard let index = selectedIndex else {
+      reset(to: detectedSegment.tag)
+      lineLayer?.isHidden = false
+      lineLayer?.update(with: detectedSegment.frame, with: false)
+      return false
+    }
+    
+    guard let currentSegment = subLabel(byTag: index),
       detectedSegment.tag != currentSegment.tag else { return true }
     
     configurator.update(item: currentSegment, with: .normal)
@@ -160,11 +172,12 @@ public class AYSegmentControl: UIControl, AYSegment {
   
   override public func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
     super.continueTracking(touch, with: event)
-    
     let point = touch.location(in: self)
     
+    guard let index = selectedIndex else { return false }
+
     guard let detectedSegment = detectSubview(point, ignoringY: true),
-      let currentSegment = subLabel(byTag: selectedIndex) else { return true }
+      let currentSegment = subLabel(byTag: index) else { return true }
     
     configurator.update(item: currentSegment, with: .normal)
     configurator.update(item: detectedSegment, with: .selected)
@@ -180,13 +193,14 @@ public class AYSegmentControl: UIControl, AYSegment {
   
   override public func endTracking(_ touch: UITouch?, with event: UIEvent?) {
     super.endTracking(touch, with: event)
-    
     guard let point = touch?.location(in: self) else { return }
-    
+
+    guard let index = selectedIndex else { return }
+
     guard let detectedSegment = detectSubview(point),
-      let currentSegment = subLabel(byTag: selectedIndex),
+      let currentSegment = subLabel(byTag: index),
       detectedSegment.tag != currentSegment.tag else {
-        if let currentSegment = subLabel(byTag: selectedIndex) {
+        if let currentSegment = subLabel(byTag: index) {
           lineLayer?.update(with: currentSegment.frame, with: false)
         }
         return
@@ -200,15 +214,24 @@ public class AYSegmentControl: UIControl, AYSegment {
   public func select(segment index: Int, with animation: Bool) {
     reset()
 
+    lineLayer?.isHidden = false
+  
     guard let nextSegment = subLabel(byTag: index),
-      let currentSegment = subLabel(byTag: selectedIndex),
-      nextSegment.tag != currentSegment.tag else { return }
+      let currentSegment = subLabel(byTag: selectedIndex ?? 0) else { return }
   
     configurator.update(item: currentSegment, with: .normal)
     configurator.update(item: nextSegment, with: .selected)
     
     lineLayer?.update(with: nextSegment.frame, with: animation)
     selectedIndex = nextSegment.tag
+  }
+  
+  public func unselect() {
+    let fromIndex = 0
+    let toIndex = segmentTitles.count
+    (fromIndex..<toIndex).forEach {
+      configurator.update(item: subLabel(byTag: $0), with: .normal)
+    }
   }
   
   // MARK: - Private methods

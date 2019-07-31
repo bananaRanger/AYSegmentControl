@@ -39,11 +39,11 @@ class ViewController: UIViewController {
     segmentControl.lineCornerRadius = segmentControl.lineHeight / 2
     segmentControl.select(segment: 0, with: false)
     
-    updateUI(with: segmentControl.selectedIndex)
+    updateUI(with: segmentControl.selectedIndex ?? 0)
   }
   
   @IBAction func segmentControlAction(_ sender: AYSegmentControl) {
-    updateUI(with: sender.selectedIndex, animation: true)
+    updateUI(with: segmentControl.selectedIndex ?? 0, animation: true)
   }
   
   private func updateUI(with index: Int, animation: Bool = false) {

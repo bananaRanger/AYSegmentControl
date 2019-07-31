@@ -1,5 +1,5 @@
 PODS:
-  - AYSegmentControl (0.1.0)
+  - AYSegmentControl (1.0.3)
 
 DEPENDENCIES:
   - AYSegmentControl (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AYSegmentControl: 3245cf0ba40150053faaaf04958641b768566a8c
+  AYSegmentControl: ea0bc9c465e9a8bf1d71361601b90a18c93cda76
 
-PODFILE CHECKSUM: 15c267490cee6c0e80c638b96f3f78bfc703dd15
+PODFILE CHECKSUM: 9b3cec817c54536e0e526fbec142a9fdb904ad3f
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.3

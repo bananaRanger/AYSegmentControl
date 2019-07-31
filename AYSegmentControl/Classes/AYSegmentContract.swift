@@ -40,7 +40,8 @@ public protocol AYSegment where Self: UIControl {
   
   var segmentTitles: [String] { get set }
   
-  var selectedIndex: Int { get }
+  var selectedIndex: Int? { get }
   
+  func unselect()
   func select(segment index: Int, with animation: Bool)
 }
