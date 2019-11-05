@@ -15,7 +15,7 @@ A special control that provides one or more buttons in a single view for selecti
 ## Demo
 
 <p align="center">
-  <img width="244" height="429" src="https://github.com/bananaRanger/AYSegmentControl/blob/master/Resources/demo.mov?raw=true">
+  <img width="244" height="429" src="https://github.com/bananaRanger/AYSegmentControl/blob/master/Resources/demo.gif?raw=true">
 </p>
 
 ## Example
