@@ -210,6 +210,15 @@ public class AYSegmentControl: UIControl, AYSegment {
     selectedIndex = detectedSegment.tag
   }
   
+  public override func cancelTracking(with event: UIEvent?) {
+    super.cancelTracking(with: event)
+    guard let index = selectedIndex else { return }
+
+    if let currentSegment = subLabel(byTag: index) {
+      lineLayer?.update(with: currentSegment.frame, with: false)
+    }
+  }
+  
   // MARK: - Public methods
   public func select(segment index: Int, with animation: Bool) {
     reset()
